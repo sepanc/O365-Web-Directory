@@ -21,9 +21,9 @@ The Office 365 Directory Sample for Web uses the **Office 365 unified endpoint (
 * [Set up your Office 365 development environment](https://msdn.microsoft.com/en-us/office/office365/howto/setup-development-environment).
 * A registered Azure application. The application must have the following permissions:
     * Windows Azure Active Directory
-        * Enable sign-on and read user's profiles.
+        * Enable sign-on and read user's profiles
     * Microsoft Graph
-        * Read graph data
+        * Read and write all user's full profiles
 * The registered Azure application also needs to have http://localhost:8080/ set as a reply URL. 
 
 <a name="configure"/>
