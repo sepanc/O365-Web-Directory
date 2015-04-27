@@ -44,7 +44,7 @@ This sample requires the following:
 
 10. In this tutorial, we'll demonstrate how to get a user's email so add the **Office 365 unified API (preview)** application. Click the plus sign in the application's row and then click the check mark at the top right to add it. Then click the check mark at the bottom right to continue.
 
-11. In the **Office 365 unified API (preview)** row, select **Delegated Permissions**, and in the selection list, choose **Read all users' full profiles**.
+11. In the **Office 365 unified API (preview)** row, select **Delegated Permissions**, and in the selection list, choose **Read all users' basic profiles**.
 
 12. Click **Save** to save the app's configuration.
 
@@ -60,12 +60,12 @@ In order to get an access token for Office 365 API requests, the application wil
 
 4. Using the **Manage Manifest** button, upload the updated manifest file.
 
-Open **app.js** and fill in your tenant information and Azure application client ID in the *tenant* and *cliendId* variables, respectively. 
-
 <a name="run-the-sample"/>
-### Run the sample
+### Run the app
 
-You will install the necessary dependencies and run the sample via the command line. Begin by opening a command prompt and navigating to your local repository's root folder. Once there, follow the steps below.
+First, open **app.js** and fill in your tenant information and Azure application client ID in the *tenant* and *cliendId* variables, respectively. 
+
+Next, you'll install the necessary dependencies and run the sample via the command line. Begin by opening a command prompt and navigating to your local repository's root folder. Once there, follow the steps below.
 
 1. Install project dependencies by running ```npm install```.
 2. Now that all the project dependencies have been installed, start the development server by running ```node server.js``` in the root folder.

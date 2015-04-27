@@ -16,15 +16,6 @@ app.use(morgan('dev'));
 // Set the front-end folder to serve public assets.
 app.use(express.static(__dirname + '/frontend'));
 
-// Configure app to handle CORS requests.
-app.use(function (req, res, next) {
-	res.setHeader('Access-Control-Allow-Origin', '*');
-	res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
-	res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With, content-type, \Authorization');
-
-	next();
-});
-
 // Set up our one route to the index.html file.
 app.get('*', function(req, res) {
 	res.sendFile(path.join(__dirname + '/frontend/views/index.html'));
@@ -36,7 +27,7 @@ console.log('Listening on port ' + port + '...');
 
 // *********************************************************
 //
-// O365-Web-CORS-Directory, https://github.com/OfficeDev/O365-Web-CORS-Directory
+// O365-Web-Directory, https://github.com/OfficeDev/O365-Web-Directory
 //
 // Copyright (c) Microsoft Corporation
 // All rights reserved.

@@ -32,7 +32,7 @@ angular.module('directoryApp', [
 
 // *********************************************************
 //
-// O365-Web-CORS-Directory, https://github.com/OfficeDev/O365-Web-CORS-Directory
+// O365-Web-Directory, https://github.com/OfficeDev/O365-Web-Directory
 //
 // Copyright (c) Microsoft Corporation
 // All rights reserved.
