@@ -2,32 +2,63 @@
 
 **Table of contents**
 
-* [Introduction](#introduction)
 * [Prerequisites](#prerequisites)
-* [Configure the sample](#configure) 
+* [Register and configure the app](#configure) 
 * [Run the sample](#run-the-sample)
 * [Questions and comments](#questions-and-comments)
 * [Additional resources](#additional-resources)
 
-<a name="introduction"></a>
-## Introduction
-
 The Office 365 Directory Sample for Web uses the **Office 365 unified endpoint (preview)** to get information from Azure AD.
 
 <a name="prerequisites"/>
-### Prerequisites
+## Prerequisites
 
-* [Node.js](https://nodejs.org/). Node is required to run the sample on a development server. 
-* [Set up your Office 365 development environment](https://msdn.microsoft.com/en-us/office/office365/howto/setup-development-environment).
-* A registered Azure application. The application must have the following permissions:
-    * Windows Azure Active Directory
-        * Enable sign-on and read user's profiles
-    * Microsoft Graph
-        * Read and write all user's full profiles
-* The registered Azure application also needs to have http://localhost:8080/ set as a reply URL. 
+This sample requires the following:
+* [Node.js](https://nodejs.org/). Node is required to run the sample on a development server and to install dependencies.
+* An Office 365 account. You can sign up for [an Office 365 Developer subscription](http://aka.ms/ro9c62) that includes the resources that you need to start building Office 365 apps.
+* A Microsoft Azure tenant to register your application. Azure Active Directory provides identity services that applications use for authentication and authorization. A trial subscription can be acquired here: [Microsoft Azure](http://aka.ms/jjm0q7).
+
+**Note**  You will also need to ensure your Azure subscription is bound to your Office 365 tenant. Check out the Active Directory team's blog post, [Creating and Managing Multiple Windows Azure Active Directories](http://aka.ms/lrb3ln) for instructions. In this post, the *Adding a new directory* section will explain how to do this. You can also read [Set up Azure Active Directory access for your Developer Site](http://aka.ms/fv273q) for more information.
+
 
 <a name="configure"/>
-### Configure the sample
+## Register and configure the app
+
+1. Sign into the [Azure Management Portal](https://manage.windowsazure.com/) using your Office 365 Developer Site credentials.
+
+2. Click the **Active Directory** node in the left column and select the directory linked to your Office 365 subscription.
+
+3. Select the **Applications** tab and then **Add** at the bottom of the screen.
+
+4. On the pop-up, select **Add an application my organization is developing**. Then click the arrow to continue. 
+
+5. Choose a name for the app, such as *SimpleMailApp*, and select **Web application and/or web API** as its Type. Then click the arrow to continue.
+
+6. The value of **Sign-on URL** is the URL where the application will be hosted. Use *http://localhost:8080/* for the sample project.
+
+7. The value of **App ID URI** is a unique identifier for Azure AD to identify the app. You can use http://{your_subdomain}/O365-Web-Directory, where {your_subdomain} is the subdomain of .onmicrosoft you specified while signing up for your Office 365 Developer Site. Then click the check mark to provision the application.
+
+8. Once the application has been successfully added, you will be taken to the Quick Start page for the application. From here, select the **Configure** tab.
+
+9. Scroll down to the **permissions to other applications** section and click the **Add application** button.
+
+10. In this tutorial, we'll demonstrate how to get a user's email so add the **Office 365 unified API (preview)** application. Click the plus sign in the application's row and then click the check mark at the top right to add it. Then click the check mark at the bottom right to continue.
+
+11. In the **Office 365 unified API (preview)** row, select **Delegated Permissions**, and in the selection list, choose **Read all users' full profiles**.
+
+12. Click **Save** to save the app's configuration.
+
+### Configure the app to allow the OAuth 2.0 implicit grant flow
+
+In order to get an access token for Office 365 API requests, the application will use the OAuth implicit grant flow. You need to update the application's manifest to allow the OAuth implicit grant flow because it is not allowed by default. 
+
+1. Select the **Configure** tab of the application's entry in the Azure Management Portal. 
+
+2. Using the **Manage Manifest** button in the drawer, download the manifest file for the application and save it to the computer.
+
+3. Open the manifest file with a text editor. Search for the *oauth2AllowImplicitFlow* property. By default it is set to *false*; change it to *true* and save the file.
+
+4. Using the **Manage Manifest** button, upload the updated manifest file.
 
 Open **app.js** and fill in your tenant information and Azure application client ID in the *tenant* and *cliendId* variables, respectively. 
 
