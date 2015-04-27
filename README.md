@@ -82,7 +82,7 @@ We'd love to get your feedback on this sample. You can send your questions and s
 <a name="additional-resources"/>
 ## Additional resources
 
-- [Office 365 APIs documentation](http://aka.ms/kbwa5c)
+- [Overview of developing on the Office 365 platform](http://aka.ms/kbwa5c)
 - [Office 365 APIs starter projects and code samples](http://aka.ms/x1kpnz)
 - [Office developer code samples](http://aka.ms/afh45z)
 - [Office dev center](http://aka.ms/uftrm1)
