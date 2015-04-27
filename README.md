@@ -42,7 +42,7 @@ This sample requires the following:
 
 9. Scroll down to the **permissions to other applications** section and click the **Add application** button.
 
-10. In this tutorial, we'll demonstrate how to get a user's email so add the **Office 365 unified API (preview)** application. Click the plus sign in the application's row and then click the check mark at the top right to add it. Then click the check mark at the bottom right to continue.
+10. Click the plus sign in the **Office 365 unified API (preview)** row and then click the check mark at the top right to add it. Then click the check mark at the bottom right to continue.
 
 11. In the **Office 365 unified API (preview)** row, select **Delegated Permissions**, and in the selection list, choose **Read all users' basic profiles**.
 
