@@ -4,7 +4,7 @@
 
 * [Prerequisites](#prerequisites)
 * [Register and configure the app](#configure) 
-* [Run the sample](#run-the-sample)
+* [Run the app](#run-the-sample)
 * [Questions and comments](#questions-and-comments)
 * [Additional resources](#additional-resources)
 
@@ -61,7 +61,7 @@ In order to get an access token for Office 365 API requests, the application wil
 4. Using the **Manage Manifest** button, upload the updated manifest file.
 
 <a name="run-the-sample"/>
-### Run the app
+## Run the app
 
 First, open **app.js** and fill in your tenant information and Azure application client ID in the *tenant* and *cliendId* variables, respectively. 
 
