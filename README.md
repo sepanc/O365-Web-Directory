@@ -32,7 +32,7 @@ This sample requires the following:
 
 4. On the pop-up, select **Add an application my organization is developing**. Then click the arrow to continue. 
 
-5. Choose a name for the app, such as *SimpleMailApp*, and select **Web application and/or web API** as its Type. Then click the arrow to continue.
+5. Choose a name for the app, such as *O365-Web-Directory*, and select **Web application and/or web API** as its Type. Then click the arrow to continue.
 
 6. The value of **Sign-on URL** is the URL where the application will be hosted. Use *http://localhost:8080/* for the sample project.
 
@@ -44,7 +44,7 @@ This sample requires the following:
 
 10. Click the plus sign in the **Office 365 unified API (preview)** row and then click the check mark at the top right to add it. Then click the check mark at the bottom right to continue.
 
-11. In the **Office 365 unified API (preview)** row, select **Delegated Permissions**, and in the selection list, choose **Read all users' basic profiles**.
+11. In the **Office 365 unified API (preview)** row, select **Delegated Permissions**, and in the selection list, choose **Read directory data**.
 
 12. Click **Save** to save the app's configuration.
 
